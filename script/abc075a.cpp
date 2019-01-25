@@ -9,6 +9,12 @@
 using namespace std;
 #define ll long long
 int main(){
-
-    return 0;
+  int a,b,c;
+  cin >> a >> b >>c;
+  if(a==b){
+    cout << c;
+  }else{
+    cout << a+b-c;
+  }
+  return 0;
 }

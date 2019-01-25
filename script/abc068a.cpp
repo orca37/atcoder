@@ -9,6 +9,11 @@
 using namespace std;
 #define ll long long
 int main(){
-
-    return 0;
+    int a,b;
+    cin >> a >> b;
+    if((a%3)!=0 && (a%3)==(b%3)){
+      cout << "Impossible";
+    }else{
+      cout << "Possible";
+    }
 }

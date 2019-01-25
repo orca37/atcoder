@@ -9,6 +9,8 @@
 using namespace std;
 #define ll long long
 int main(){
-
+    int R,G;
+    cin >> R >> G;
+    cout << 2*G-R;
     return 0;
 }
