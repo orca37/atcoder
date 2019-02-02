@@ -9,10 +9,8 @@
 using namespace std;
 #define ll long long
 int main(){
-    string a;
+    int a;
     cin >> a;
-    a[5]=' ';
-    a[13]=' ' ;
-    cout << a;
+    if(a<1200)cout <<"ABC";else cout <<"ARC";
     return 0;
 }

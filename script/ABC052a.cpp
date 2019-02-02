@@ -9,10 +9,9 @@
 using namespace std;
 #define ll long long
 int main(){
-    string a;
-    cin >> a;
-    a[5]=' ';
-    a[13]=' ' ;
-    cout << a;
+    int a,b,c,d;
+    cin >>a >> b >> c >> d;
+    int ans=max(a*b,c*d);
+    cout << ans;
     return 0;
 }

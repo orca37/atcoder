@@ -11,41 +11,36 @@ using namespace std;
 int main(){
     ll N,K;
     cin >> N >> K;
-    ll x[N];
-    ll i;
-    for(i=0;i<N;i++){
-      cin >> x[i];
-    }
-    ll bdr=0;
-    while(x[bdr]<0 && bdr<N)bdr++;
-    ll mi[N];
-    ll pl[N];
-    mi[0]=0;
-    i=1;
-    while(i<=bdr){
-      mi[i]=-x[bdr-i];
-      i++;
-    }
-    pl[0]=0;
-    i=1;
-    while(bdr+i<=N){
-      pl[i]=x[bdr+i-1];
-      i++;
-    }
-    if(bdr<=K){
-      i=bdr;
-    }else{
-      i=K;
-    }
-    ll ans=100000000;
+    ll i,j,k;
+    i=0;
+    j=0;
+    ll a[N],m[N],p[N];
+    a[0]=0;
+    m[0]=0;
+    p[0]=0;
     ll tmp;
-    while(i>=0 && K-i<=N-bdr){
-      tmp=2*mi[i]+pl[K-i];
-      if(tmp<ans)ans=tmp;
-      tmp=mi[i]+2*pl[K-i];
-      if(tmp<ans)ans=tmp;
-      i--;
+    for(k=0;k<N;k++){
+      cin >> tmp;
+      if(tmp<0){
+        i++;
+        a[i]=-tmp;
+      }
+      if(tmp>=0){
+        j++;
+        p[j]=tmp;
+      }
     }
-      cout <<ans;
+    for(k=1;k<=i;k++){
+        m[k]=a[i-k+1];
+      }
+    ll ans=10000000000000000;
+    k=0;
+    if(K>=j)k=K-j;
+    while(k<=K && k<=i){
+      if(m[k]+2*p[K-k]<ans)ans=m[k]+2*p[K-k];
+      if(2*m[k]+p[K-k]<ans)ans=2*m[k]+p[K-k];
+      k++;
+    }
+    cout << ans;
     return 0;
 }

@@ -9,10 +9,9 @@
 using namespace std;
 #define ll long long
 int main(){
-    string a;
-    cin >> a;
-    a[5]=' ';
-    a[13]=' ' ;
-    cout << a;
+    string s;
+    int i;
+    cin >> s >> i;
+    cout << s[i-1];
     return 0;
 }
