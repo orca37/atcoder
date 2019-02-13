@@ -22,12 +22,11 @@ int main(){
       r*=2;
     }
     ll tmp;
-    while(r-l<=1){
-      cout << l << r;
+    while(r-l>1){
       tmp=(l+r)/2;
       if(tmp*tmp<=tnum)l=tmp;
       if(tmp*tmp>=tnum)r=tmp;
     }
-    if(l*l==tnum || r*r==tnum)cout <<"YES"<<endl;else cout <<"NO"<<endl;
+    if(l*l==tnum |r*r==tnum)cout <<"Yes"<<endl;else cout <<"No"<<endl;
     return 0;
 }
