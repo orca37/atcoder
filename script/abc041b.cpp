@@ -11,6 +11,6 @@ using namespace std;
 int main(){
     ll a,b,c;
     cin >> a >> b >>c;
-    cout <<a*b*c%1000000007;
+    cout <<a*b%1000000007*c%1000000007;
     return 0;
 }
