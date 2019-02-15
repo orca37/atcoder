@@ -9,8 +9,8 @@
 using namespace std;
 #define ll long long
 int main(){
-    ll h,w;
-    cin >> h >> w;
-    
+    ll a,b,c;
+    cin >> a >> b >>c;
+    cout <<a*b*c%1000000007;
     return 0;
 }
