@@ -9,8 +9,10 @@
 using namespace std;
 #define ll long long
 int main(){
-    int a,b,c,d;
-    cin >> a >> b >> c >> d;
-    cout << (a-c)*(b-d);
+    ll N,A,B;
+    cin >> N >> A >> B;
+    ll i,j;
+    bool A[N],B[N];
+    for(i=0;i<N;i)
     return 0;
 }
