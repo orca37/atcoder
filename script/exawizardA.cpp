@@ -9,10 +9,8 @@
 using namespace std;
 #define ll long long
 int main(){
-	ll i,j,k;
-	ll ans;
-	ll a,b,N;
-	cin >> N;
-	cout << N*(N-1)/2;
+    int A,B,C;
+    cin >> A >> B >> C;
+    if (A==B&&B==C)cout << "Yes";else cout << "No";
     return 0;
 }

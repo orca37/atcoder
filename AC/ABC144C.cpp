@@ -9,10 +9,14 @@
 using namespace std;
 #define ll long long
 int main(){
-	ll i,j,k;
-	ll ans;
-	ll a,b,N;
+	ll N;
 	cin >> N;
-	cout << N*(N-1)/2;
+	ll i=1;
+	ll ans=0;
+	while(i*i <= N){
+		if(N%i==0)ans=i + N/i-2;
+		i++;
+	}
+	cout << ans;
     return 0;
 }

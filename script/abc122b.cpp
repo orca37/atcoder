@@ -9,12 +9,15 @@
 using namespace std;
 #define ll long long
 int main(){
-    ll N,A,B;
-    cin >> N >> A >> B;
-    ll i,j;
-    bool A[N],B[N];
-    for(i=0;i<N;i++){
-      
+    string s;
+    cin >> s;
+    ll i;
+    ll tmp=0;
+    ll mx=0;
+    for(i=0;i<s.size();i++){
+      if(s[i]=='A'||s[i]=='T'||s[i]=='G'||s[i]=='C')tmp++;else tmp=0;
+      mx=max(tmp,mx);
     }
+    cout << mx;
     return 0;
 }

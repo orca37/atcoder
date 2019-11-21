@@ -9,10 +9,12 @@
 using namespace std;
 #define ll long long
 int main(){
-	ll i,j,k;
-	ll ans;
-	ll a,b,N;
-	cin >> N;
-	cout << N*(N-1)/2;
+    int N,K;
+    string s;
+    int i;
+    cin >> N >> K >> s;
+    for(i=0;i<N;i++){
+      if(i!=K-1)cout << s[i];else cout << char(s[i]+32);
+    }
     return 0;
 }
