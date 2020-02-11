@@ -9,7 +9,8 @@
 using namespace std;
 #define ll long long
 int main(){
-	ll N;
-	string c;
+	int K,X;
+	cin >> K >> X;
+	if(K*500>=X)cout<<"Yes" <<endl;else cout << "No"<<endl;
     return 0;
 }

@@ -1,4 +1,5 @@
 #include<iostream>
+#include<stdlib.h>
 #include<string>
 #include<vector>
 #include<iomanip>
@@ -9,7 +10,9 @@
 using namespace std;
 #define ll long long
 int main(){
-	ll N;
-	string c;
+	char c;
+	cin >> c;
+	char d=c+1;
+	cout<< d;
     return 0;
 }

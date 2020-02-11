@@ -9,7 +9,8 @@
 using namespace std;
 #define ll long long
 int main(){
-	ll N;
-	string c;
+	string s,t;
+	cin >> s >> t;
+	cout << t << s <<endl;
     return 0;
 }

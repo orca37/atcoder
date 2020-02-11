@@ -9,7 +9,11 @@
 using namespace std;
 #define ll long long
 int main(){
-	ll N;
-	string c;
-    return 0;
+	string S;
+	cin >> S;
+	int i;
+	for(i=0;i<S.size();i++){
+		cout << 'x';
+	}
+	return 0;
 }

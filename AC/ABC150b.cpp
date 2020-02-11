@@ -9,7 +9,13 @@
 using namespace std;
 #define ll long long
 int main(){
-	ll N;
-	string c;
+	int N;
+	string S;
+	cin >> N >> S;
+	int i,ans=0;
+	for(i=0;i<N-2;i++){
+		if(S[i]=='A'&& S[i+1]=='B'&& S[i+2]=='C')ans++;
+	}
+	cout << ans;
     return 0;
 }

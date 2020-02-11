@@ -10,6 +10,14 @@ using namespace std;
 #define ll long long
 int main(){
 	ll N;
-	string c;
+	cin >> N;
+	ll ans=0,tmp=5;
+	if(N%2==0){
+		while(N>=tmp){
+			ans+=N/tmp/2;
+			tmp*=5;
+		}
+	}
+	cout << ans;
     return 0;
 }

@@ -9,7 +9,12 @@
 using namespace std;
 #define ll long long
 int main(){
-	ll N;
-	string c;
+	ll H;
+	cin >> H;
+	ll tmp=2;
+	while(tmp<=H){
+		tmp*=2;
+	}
+	cout << tmp-1;
     return 0;
 }
