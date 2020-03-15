@@ -5,23 +5,16 @@
 #include<algorithm>
 #include<queue>
 #include<stack>
+#include<list>
 #include<map>
+#include<deque>
+#include<math.h>
 using namespace std;
 #define ll long long
 int main(){
     ll N;
-    cin >> N;
-    ll H,max=0;
-    ll i;
-    for(i=0;i<N;i++){
-      cin >> H;
-      if(max<H){
-        max=H;
-      }else if(H<max-1){
-        cout << "No";
-        return 0;
-      }
-    }
-    cout << "Yes";
+    string s;
+    cin >> N >> s;
+    if(N%2==0&&s.substr(0,N/2)==s.substr(N/2,N/2))cout <<"Yes";else cout << "No";
     return 0;
 }

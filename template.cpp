@@ -7,11 +7,13 @@
 #include<stack>
 #include<list>
 #include<map>
+#include<deque>
+#include<math.h>
 using namespace std;
 #define ll long long
 int main(){
-	ll N;
-	list < string > lst;
-	
+    ll r;
+    cin >> r;
+    cout << r*r;
     return 0;
 }
