@@ -5,16 +5,15 @@
 #include<algorithm>
 #include<queue>
 #include<stack>
+#include<list>
 #include<map>
+#include<deque>
+#include<math.h>
 using namespace std;
 #define ll long long
 int main(){
-    int N,K;
-    string s;
-    int i;
-    cin >> N >> K >> s;
-    for(i=0;i<N;i++){
-      if(i!=K-1)cout << s[i];else cout << char(s[i]+32);
-    }
+	ll N,A,B;
+    cin >> N >> A >> B;
+    cout << N/(A+B)*A+min(N%(A+B),A);
     return 0;
 }

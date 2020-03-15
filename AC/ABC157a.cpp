@@ -5,12 +5,15 @@
 #include<algorithm>
 #include<queue>
 #include<stack>
+#include<list>
 #include<map>
+#include<deque>
+#include<math.h>
 using namespace std;
 #define ll long long
 int main(){
-  int A,B;
-  cin >> A >> B;
-  if(B%A==0)cout << A+B;else cout <<B-A;
-  return 0;
+	ll a;
+    cin >> a;
+    cout << a/2+a%2;
+    return 0;
 }

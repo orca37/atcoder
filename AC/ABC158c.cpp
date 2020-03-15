@@ -5,19 +5,18 @@
 #include<algorithm>
 #include<queue>
 #include<stack>
+#include<list>
 #include<map>
+#include<deque>
+#include<math.h>
 using namespace std;
 #define ll long long
 int main(){
-    int N,i;
-    cin >> N;
-    int mx=0,sum=0;
-    int a;
-    for(i=0;i<N;i++){
-      cin >> a;
-      sum+=a;
-      mx=max(a,mx);
+	ll A,B,i;
+    cin >> A >> B;
+    for(i=1;i<=1000;i++){
+        if(i*8/100==A && i*10/100==B){cout << i;return 0;}
     }
-    if(sum>2*mx)cout<<"Yes";else cout <<"No";
+    cout << -1;
     return 0;
 }

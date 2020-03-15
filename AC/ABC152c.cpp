@@ -5,24 +5,22 @@
 #include<algorithm>
 #include<queue>
 #include<stack>
+#include<list>
 #include<map>
+#include<deque>
+#include<math.h>
 using namespace std;
 #define ll long long
 int main(){
-    ll N;
+	ll N,P;
     cin >> N;
-    ll tmp=1;
-    string str="";
-    if(N==0)cout << 0;
-    while(N!=0){
-      if(N%(tmp*2)!=0){
-        N=N-tmp;
-        str= '1'+str;
-      }else{
-        str= '0'+str;
-      }
-      tmp*=-2;
+    ll i;
+    ll mn=N+1;
+    ll ans=0;
+    for(i=0;i<N;i++){
+        cin >> P;
+        if(mn>P){mn=P;ans++;}
     }
-    cout << str;
+    cout << ans;
     return 0;
 }

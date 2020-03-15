@@ -5,20 +5,15 @@
 #include<algorithm>
 #include<queue>
 #include<stack>
+#include<list>
 #include<map>
+#include<deque>
+#include<math.h>
 using namespace std;
 #define ll long long
 int main(){
-	ll N,M;
-	cin >> N >> M;
-	ll A[N];
-	ll i;
-	for(i=0;i<N;i++){
-		cin >> A[i];
-	}
-	sort(A,A+N);
-	for(i=0;i<N;i++){
-		cout << A[i]<<" ";
-	}
+    ll r;
+    cin >> r;
+    cout << r*r;
     return 0;
 }

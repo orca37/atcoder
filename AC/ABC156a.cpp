@@ -5,13 +5,14 @@
 #include<algorithm>
 #include<queue>
 #include<stack>
+#include<list>
 #include<map>
-#include<cmath>
+#include<deque>
 using namespace std;
 #define ll long long
 int main(){
-    ll A,B;
+	int A,B;
     cin >> A >> B;
-    cout << (B*1900+(A-B)*100)*pow(2,B);
+    cout << B+(10-A)*100;
     return 0;
 }

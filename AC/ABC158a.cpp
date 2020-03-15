@@ -5,14 +5,15 @@
 #include<algorithm>
 #include<queue>
 #include<stack>
+#include<list>
 #include<map>
+#include<deque>
+#include<math.h>
 using namespace std;
 #define ll long long
 int main(){
-    double A,B,C,D;
-    cin >> A >> B >> C >> D;
-    if(B/A>D/C)cout << "TAKAHASHI"<<endl;
-    else if(B/A<D/C)cout <<"AOKI"<<endl;
-    else cout << "DRAW"<<endl;
+	string S;
+    cin >> S;
+    if(S=="AAA" || S=="BBB" )cout << "No";else cout << "Yes";
     return 0;
 }

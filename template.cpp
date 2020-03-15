@@ -5,11 +5,13 @@
 #include<algorithm>
 #include<queue>
 #include<stack>
+#include<list>
 #include<map>
 using namespace std;
 #define ll long long
 int main(){
 	ll N;
-	string c;
+	list < string > lst;
+	
     return 0;
 }
