@@ -17,8 +17,12 @@ int main(){
     cin >> N;
     for(i=1;i<=9;i++){
         for(j=1;j<=9;j++){
-            if(i*j==N)cout <<"Yes";else cout << "No";
+            if(i*j==N){
+            	cout <<"Yes";
+            	return 0;
+            }
         }
     }
+    cout << "No";
     return 0;
 }
