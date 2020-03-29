@@ -14,20 +14,20 @@ using namespace std;
 int main(){
     ll N;
     cin >> N;
-    ll a[100001];
+    ll a[100005];
     vector <ll> prime;
     ll i;
-    for(i=0;i<=100000;i++){
+    for(i=0;i<=100005;i++){
         a[i]=1;
     }
     a[0]=0;
     a[1]=0;
     ll t,c;
-    for(i=2;i<=100000;i++){
+    for(i=2;i<=100005;i++){
         if(a[i]==1){
             prime.push_back(i);
             t=2*i;
-            while(t<=100000){
+            while(t<=100005){
                 a[t]=0;
                 t+=i;
             }
@@ -49,6 +49,7 @@ int main(){
         }
     }
     ll sum=1;
+    if(t!=1)sum*=t+1;
     for(auto itr=fact.begin();itr!=fact.end();++itr){
         sum*=itr->second;
     }

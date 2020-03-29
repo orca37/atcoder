@@ -12,16 +12,8 @@
 using namespace std;
 #define ll long long
 int main(){
-    ll N,A;
-    cin >> N;
-    ll i;
-    ll ans=0;
-    ll t=0;
-    for(i=0;i<N;i++){
-        cin >> A;
-        ans+=(A+t)/2;
-        if(A!=0)t=(A+t)%2;else t=0;
-    }
-    cout << ans;
+    ll X;
+    cin >> X;
+    cout << X/500*1000+X%500/5*5;
     return 0;
 }

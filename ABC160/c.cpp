@@ -12,16 +12,17 @@
 using namespace std;
 #define ll long long
 int main(){
-    ll N,A;
-    cin >> N;
-    ll i;
-    ll ans=0;
-    ll t=0;
+    ll K,N,i;
+    cin >> K >> N;
+    ll A[N+1];
     for(i=0;i<N;i++){
-        cin >> A;
-        ans+=(A+t)/2;
-        if(A!=0)t=(A+t)%2;else t=0;
+        cin >> A[i];
     }
-    cout << ans;
+    A[N]=A[0]+K;
+    ll mx=0;
+    for(i=0;i<N;i++){
+        mx=max(mx,A[i+1]-A[i]);
+    }
+    cout << K-mx;
     return 0;
 }
