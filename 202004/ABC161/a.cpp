@@ -11,12 +11,9 @@
 #include<math.h>
 using namespace std;
 #define ll long long
-bool visited[111];
-ll 
-ll bfs(){
-
-}
 int main(){
-    ll N;
+    ll x,y,z;
+    cin >> x >> y >> z;
+    cout << z << x << y;
     return 0;
 }

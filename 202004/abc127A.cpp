@@ -8,15 +8,16 @@
 #include<list>
 #include<map>
 #include<deque>
+#include<bitset>
 #include<math.h>
 using namespace std;
 #define ll long long
-bool visited[111];
-ll 
-ll bfs(){
 
-}
 int main(){
-    ll N;
+    ll A,B;
+    cin >> A >> B;
+    if(A<6)cout << 0;
+    if(A>12)cout << B;
+    if(A>=6&&A<=12)cout << B/2;
     return 0;
 }

@@ -11,7 +11,7 @@
 #include<math.h>
 using namespace std;
 #define ll long long
-ll gcd(a,b){
+ll gcd(ll a,ll b){
     ll t;
     if(a<b){
         t=a;
@@ -29,7 +29,7 @@ ll gcd(a,b){
 int main(){
     ll N;
     cin >> N;
-    A[N];
+    ll A[N];
     ll i;
     for(i=0;i<N;i++){
         cin >> A[i];
@@ -40,13 +40,13 @@ int main(){
     R[N-1]=A[N-1];
     for(i=1;i<N;i++){
         L[i]=gcd(L[i-1],A[i]);
-        R[N-i-1]=gcd(R[N-i-1],A[N-i]);
+        R[N-i-1]=gcd(R[N-i],A[N-i-1]);
     }
     for(i=1;i<N-1;i++){
-        ans=max(ans,gcd(L[i-1],R[i+1]))
+        ans=max(ans,gcd(L[i-1],R[i+1]));
     }
-    ans=max(ans,L[N]);
-    ans=max(ans,R[0]);
+    ans=max(ans,L[N-2]);
+    ans=max(ans,R[1]);
     cout << ans;
     return 0;
 }

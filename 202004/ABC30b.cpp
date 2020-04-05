@@ -11,12 +11,12 @@
 #include<math.h>
 using namespace std;
 #define ll long long
-bool visited[111];
-ll 
-ll bfs(){
-
-}
 int main(){
-    ll N;
+    double n,m;
+    cin >> n >> m;
+    if(n>=12)n-=12;
+    double t=5.5*m-30*n;
+    t=max(t,-t);
+    cout << min(t,360-t)<<endl;
     return 0;
 }
