@@ -14,16 +14,14 @@ using namespace std;
 #define ll long long
 
 int main(){
-    ll N,t;
-    double K;
-    cin >> N >> K;
-    double p=1.0/(dobule) N;
-    double ans=0.0;
-    while(K>=1){
-        K=K/2.0;
-        t=max(llN-K+1,0)
-        p;
+    string S;
+    cin >> S;
+    ll i;
+    ll cnt1=0,cnt2=0;
+    for(i=0;i<S.size();i++){
+        if(i%2==0){if(S[i]=='0')cnt1++;else cnt2++;}
+        if(i%2==1){if(S[i]=='1')cnt1++;else cnt2++;}
     }
-    cout<< setprecision(15) <<ans <<endl;
+    cout << min(cnt1,cnt2)<<endl;
     return 0;
 }
