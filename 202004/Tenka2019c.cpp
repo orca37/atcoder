@@ -14,18 +14,18 @@ using namespace std;
 int main(){
     ll N;
     string S;
-    cin >> N >> S;
+    cin >> N >> S; 9 1 
     ll i;
     ll w[N+1],b[N+1];
-    w[0]=0;b[N]=0;
-    for(i=1;i<=N;i++){
-        if(S[i]=='#')w[i]=w[i-1]+1;
-        if(S[N-i]=='.')b[N-i]=b[N-i+1]+1;
+    w[0]=0;b[0]=0;
+    for(i=0;i<N;i++){
+        if(S[i]=='#')w[i+1]=w[i]+1;else w[i+1]=w[i];
+        if(S[N-i-1]=='.')b[i+1]=b[i]+1;else b[i+1]=b[i];
     }
-    ll mx=N;
-    for(i=0;i<=N+1;i++){
-        mx=max(mx,w[i]+b[i]);
+    ll ans=N;
+    for(i=0;i<N+1;i++){
+        ans=min(ans,w[i]+b[N-i]);
     }
-    
+    cout << ans <<endl;
     return 0;
 }
