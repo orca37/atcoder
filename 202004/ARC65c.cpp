@@ -11,21 +11,17 @@
 #include<math.h>
 using namespace std;
 #define ll long long
+#define MOD 1000000007
 int main(){
-    ll N;
-    cin >> N;
+    ll a,b;
+    cin >> a >> b;
     ll i;
-    ll A[N];
-    ll sum[N+1];
-    sum[0]=0;
-    for(i=0;i<N;i++){
-        cin >> A[i];
-        sum[i+1]=sum[i]+A[i];
+    if(abs(a-b)>1)cout << 0;else{
+        ll t=1;
+        for(i=1;i<=min(a,b);i++){
+            t=t*i%MOD;
+        }
+        if(a==b)cout << 2*t%MOD*t%MOD;else cout << t*t%MOD*max(a,b)%MOD;
     }
-    ll ans=100000000000;
-    for(i=1;i<N;i++){
-        ans=min(ans,abs(sum[N]-2*sum[i]));
-    }
-    cout << ans;
     return 0;
 }

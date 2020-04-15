@@ -12,20 +12,14 @@
 using namespace std;
 #define ll long long
 int main(){
-    ll N;
-    cin >> N;
+    string s;
+    cin >> s;
     ll i;
-    ll A[N];
-    ll sum[N+1];
-    sum[0]=0;
-    for(i=0;i<N;i++){
-        cin >> A[i];
-        sum[i+1]=sum[i]+A[i];
-    }
-    ll ans=100000000000;
-    for(i=1;i<N;i++){
-        ans=min(ans,abs(sum[N]-2*sum[i]));
-    }
+    ll ans=0;
+    for(i=0;i<s.size();i++){
+        if(s[i]=='U')ans+=2*i+s.size()-1-i;
+        if(s[i]=='D')ans+=i+2*(s.size()-1-i);
+    }    
     cout << ans;
     return 0;
 }

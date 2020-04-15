@@ -12,20 +12,18 @@
 using namespace std;
 #define ll long long
 int main(){
-    ll N;
-    cin >> N;
+    ll n;
+    cin >> n;
+    ll a[n];
     ll i;
-    ll A[N];
-    ll sum[N+1];
-    sum[0]=0;
-    for(i=0;i<N;i++){
-        cin >> A[i];
-        sum[i+1]=sum[i]+A[i];
+    for(i=0;i<n;i++){
+        cin >> a[i];
     }
-    ll ans=100000000000;
-    for(i=1;i<N;i++){
-        ans=min(ans,abs(sum[N]-2*sum[i]));
+    for(i=0;i<n/2+n%2;i++){
+        cout << a[n-1-2*i] << " ";
     }
-    cout << ans;
+    for(i=0;i<n/2;i++){
+        cout << a[n%2+2*i] << " ";
+    }
     return 0;
 }

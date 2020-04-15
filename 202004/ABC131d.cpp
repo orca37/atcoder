@@ -14,18 +14,22 @@ using namespace std;
 int main(){
     ll N;
     cin >> N;
+    pair< ll,ll> p[N];
     ll i;
-    ll A[N];
-    ll sum[N+1];
-    sum[0]=0;
+    ll a,b;
     for(i=0;i<N;i++){
-        cin >> A[i];
-        sum[i+1]=sum[i]+A[i];
+        cin >> a >> b;
+        p[i]=make_pair(b,a);
     }
-    ll ans=100000000000;
-    for(i=1;i<N;i++){
-        ans=min(ans,abs(sum[N]-2*sum[i]));
+    sort(p,p+N);
+    ll sum=0;
+    for(i=0;i<N;i++){
+        sum+=p[i].second;
+        if(p[i].first<sum){
+            cout << "No";
+            return 0;
+        }
     }
-    cout << ans;
+            cout << "Yes";
     return 0;
 }
